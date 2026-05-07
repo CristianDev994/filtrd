@@ -1,8 +1,8 @@
-﻿<div align="center">
+<div align="center">
 
 # CV Forge
 
-**Framework de generaciÃ³n de CVs bilingÃ¼es, compatibles con ATS y con diseÃ±o premium â€” impulsado por Claude AI + Astro**
+**Framework de generación de CVs bilingües, compatibles con ATS y con diseño premium — impulsado por Claude AI + Astro**
 
 [![License: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![Built with Astro](https://img.shields.io/badge/Generado%20con-Astro-ff5d00?style=flat-square&logo=astro&logoColor=white)](https://astro.build)
@@ -10,162 +10,162 @@
 [![Gratis](https://img.shields.io/badge/100%25-Gratuito-22c55e?style=flat-square)]()
 [![ES / EN](https://img.shields.io/badge/Idioma-ES%20%7C%20EN-0ea5e9?style=flat-square)]()
 
-**Leer en:** [EspaÃ±ol](#-quÃ©-es-CV Forge) Â· [English](#-what-is-CV Forge)
+**Leer en:** [Español](#español) · [English](#english)
 
 </div>
 
 ---
 
-## EspaÃ±ol
+## Español
 
-### Â¿QuÃ© es CV Forge?
+### ¿Qué es CV Forge?
 
-**CV Forge** es un framework de contexto + sistema de diseÃ±o que le indica a un agente de IA (Claude) cÃ³mo generar CVs profesionales, compatibles con sistemas ATS, como sitios web estÃ¡ticos en Astro.
+**CV Forge** es un framework de contexto + sistema de diseño que le indica a un agente de IA (Claude) cómo generar CVs profesionales, compatibles con sistemas ATS, como sitios web estáticos en Astro.
 
 En lugar de pelear con plantillas de Word o pagar suscripciones a generadores de CV, introduces tus datos una sola vez y obtienes:
 
-- Un **CV bilingÃ¼e** (EspaÃ±ol + InglÃ©s) en un Ãºnico proyecto
-- HTML **semÃ¡ntico y legible por ATS** que supera el filtro automatizado de selecciÃ³n
-- Un **diseÃ±o visual premium** con UI glassmorphism, ideal para compartir como enlace
-- **ExportaciÃ³n a PDF con un clic** vÃ­a impresiÃ³n del navegador (A4, CSS optimizado)
-- **Variantes por oferta** que adaptan automÃ¡ticamente las palabras clave a cada empresa
+- Un **CV bilingüe** (Español + Inglés) en un único proyecto
+- HTML **semántico y legible por ATS** que supera el filtro automatizado de selección
+- Un **diseño visual premium** con UI glassmorphism, ideal para compartir como enlace
+- **Exportación a PDF con un clic** vía impresión del navegador (A4, CSS optimizado)
+- **Variantes por oferta** que adaptan automáticamente las palabras clave a cada empresa
 
-> Este repositorio contiene los **archivos de contexto** que impulsan al agente â€” el sistema de diseÃ±o, las reglas CSS y las instrucciones de implementaciÃ³n paso a paso.
+> Este repositorio contiene los **archivos de contexto** que impulsan al agente — el sistema de diseño, las reglas CSS y las instrucciones de implementación paso a paso.
 >
-> **Es completamente gratuito. Ãšsalo, compÃ¡rtelo y adÃ¡ptalo libremente.**
+> **Es completamente gratuito. Úsalo, compártelo y adáptalo libremente.**
 
 ---
 
-### CaracterÃ­sticas
+### Características
 
-| CaracterÃ­stica | Detalle |
+| Característica | Detalle |
 |---|---|
-| **Compatible con ATS** | HTML semÃ¡ntico, flujo de texto lÃ³gico, sin tablas ni columnas que rompan los parsers |
-| **BilingÃ¼e** | CV en EspaÃ±ol + InglÃ©s en un Ãºnico proyecto Astro con salto de pÃ¡gina entre versiones |
-| **ExportaciÃ³n a PDF** | CSS optimizado para impresiÃ³n â€” gradientes, fuentes y layout sobreviven a `window.print()` |
-| **Variantes por empresa** | PÃ¡ginas independientes por empresa/puesto con titulares adaptados y colores de acento |
-| **DiseÃ±o premium** | UI glassmorphism Â· Fuente Inter Â· Cabecera degradada Ã­ndigo Â· Grid de dos columnas |
-| **Colores por empresa** | AdaptaciÃ³n automÃ¡tica (morado Accenture, azul Endesa, etc.) |
-| **OptimizaciÃ³n de espacio** | Sistema de 5 pasos para completar CVs escasos sin inventar contenido |
-| **Reglas de IA** | 13 reglas estrictas â€” nunca inventa experiencia, siempre pasa el test ATS de copia-pega |
+| **Compatible con ATS** | HTML semántico, flujo de texto lógico, sin tablas ni columnas que rompan los parsers |
+| **Bilingüe** | CV en Español + Inglés en un único proyecto Astro con salto de página entre versiones |
+| **Exportación a PDF** | CSS optimizado para impresión — gradientes, fuentes y layout sobreviven a `window.print()` |
+| **Variantes por empresa** | Páginas independientes por empresa/puesto con titulares adaptados y colores de acento |
+| **Diseño premium** | UI glassmorphism · Fuente Inter · Cabecera degradada índigo · Grid de dos columnas |
+| **Colores por empresa** | Adaptación automática (morado Accenture, azul Endesa, etc.) |
+| **Optimización de espacio** | Sistema de 5 pasos para completar CVs escasos sin inventar contenido |
+| **Reglas de IA** | 13 reglas estrictas — nunca inventa experiencia, siempre pasa el test ATS de copia-pega |
 
 ---
 
-### CÃ³mo funciona
+### Cómo funciona
 
 ```
 Tus datos profesionales
-        â”‚
-        â–¼
-  [skill.md] â”€â”€â–º Agente IA (Claude) lee contexto.md
-        â”‚
-        â–¼
+        │
+        ▼
+  [skill.md] ──► Agente IA (Claude) lee contexto.md
+        │
+        ▼
   Genera el proyecto Astro
-  â”œâ”€â”€ src/pages/index.astro               â† CV base bilingÃ¼e (ES + EN)
-  â”œâ”€â”€ src/pages/accenture-analista.astro  â† Variante empresa #1
-  â”œâ”€â”€ src/pages/endesa-datos.astro        â† Variante empresa #2
-  â””â”€â”€ src/styles/global.css              â† Todo el CSS personalizado
-        â”‚
-        â–¼
-  npm run build â†’ Sitio estÃ¡tico
-  Abrir en navegador â†’ Imprimir a PDF
+  ├── src/pages/index.astro               ← CV base bilingüe (ES + EN)
+  ├── src/pages/accenture-analista.astro  ← Variante empresa #1
+  ├── src/pages/endesa-datos.astro        ← Variante empresa #2
+  └── src/styles/global.css              ← Todo el CSS personalizado
+        │
+        ▼
+  npm run build → Sitio estático
+  Abrir en navegador → Imprimir a PDF
 ```
 
 El agente sigue un **flujo de 3 fases**:
 
-1. **Recogida de datos** â€” Analiza tu experiencia, repositorios de GitHub, y crea `[nombre]-context.md`
-2. **CV base bilingÃ¼e** â€” Construye el proyecto Astro completo con ambas versiones
-3. **AdaptaciÃ³n a oferta** â€” Analiza cada descripciÃ³n de empleo, calcula el % de coincidencia y genera la variante
+1. **Recogida de datos** — Analiza tu experiencia, repositorios de GitHub, y crea `[nombre]-context.md`
+2. **CV base bilingüe** — Construye el proyecto Astro completo con ambas versiones
+3. **Adaptación a oferta** — Analiza cada descripción de empleo, calcula el % de coincidencia y genera la variante
 
 ---
 
-### CÃ³mo usarlo
+### Cómo usarlo
 
-#### 1. Copia los archivos de contexto a tu sesiÃ³n de Claude
+#### 1. Copia los archivos de contexto a tu sesión de Claude
 
-Abre una conversaciÃ³n nueva en [claude.ai](https://claude.ai) y adjunta los dos archivos:
-- `contexto.md` â€” el sistema de diseÃ±o y las reglas CSS
-- `skill.md` â€” las instrucciones del agente
+Abre una conversación nueva en [claude.ai](https://claude.ai) y adjunta los dos archivos:
+- `contexto.md` — el sistema de diseño y las reglas CSS
+- `skill.md` — las instrucciones del agente
 
 #### 2. Comparte tus datos profesionales
 
-Comparte tu experiencia, formaciÃ³n, habilidades y cualquier enlace a GitHub. El agente harÃ¡ preguntas y generarÃ¡ un archivo `[nombre]-context.md` como fuente Ãºnica de verdad.
+Comparte tu experiencia, formación, habilidades y cualquier enlace a GitHub. El agente hará preguntas y generará un archivo `[nombre]-context.md` como fuente única de verdad.
 
 #### 3. Recibe tu proyecto Astro
 
-El agente genera el proyecto completo. EjecÃºtalo en local:
+El agente genera el proyecto completo. Ejecútalo en local:
 
 ```bash
 npm install
 npm run dev      # Vista previa en localhost:4321
-npm run build    # Build de producciÃ³n
+npm run build    # Build de producción
 ```
 
 #### 4. Genera variantes por oferta
 
-Pega una descripciÃ³n de empleo. El agente:
+Pega una descripción de empleo. El agente:
 - Calcula un porcentaje de coincidencia
-- Crea una nueva pÃ¡gina variante
+- Crea una nueva página variante
 - Adapta palabras clave, titular y colores de acento
 - Verifica que sigue pasando el filtro ATS
 
 #### 5. Exporta a PDF
 
-Abre la pÃ¡gina en el navegador â†’ `Ctrl+P` â†’ Guardar como PDF. El CSS de impresiÃ³n garantiza:
-- Formato A4 con mÃ¡rgenes correctos
+Abre la página en el navegador → `Ctrl+P` → Guardar como PDF. El CSS de impresión garantiza:
+- Formato A4 con márgenes correctos
 - Fondo blanco (sin gasto de tinta)
 - La barra lateral se convierte a formato lineal para los lectores ATS
-- Una pÃ¡gina por idioma, sin pÃ¡ginas en blanco
+- Una página por idioma, sin páginas en blanco
 
 ---
 
 ### Estructura del proyecto
 
 ```
-CV Forge/
-â”œâ”€â”€ contexto.md     # Sistema de diseÃ±o, reglas CSS, paletas y especificaciones de layout
-â””â”€â”€ skill.md        # Instrucciones del agente â€” flujo de 3 fases + 13 reglas de calidad
+cv-forge/
+├── contexto.md     # Sistema de diseño, reglas CSS, paletas y especificaciones de layout
+└── skill.md        # Instrucciones del agente — flujo de 3 fases + 13 reglas de calidad
 ```
 
 **`contexto.md` contiene:**
-- Plantilla de datos â€” cÃ³mo estructurar informaciÃ³n personal, experiencia, educaciÃ³n, habilidades
-- Sistema de diseÃ±o â€” tipografÃ­a (Inter), colores, grid, UI glassmorphism
-- 8 reglas CSS obligatorias â€” los patrones exactos que hacen que los PDFs se vean correctamente
-- Componente de lÃ­nea de tiempo â€” patrÃ³n cÃ­rculo + lÃ­nea con errores frecuentes de IA documentados
-- OptimizaciÃ³n de espacio â€” sistema de 5 pasos para CVs escasos
-- Variantes de color por empresa â€” Accenture, Endesa, y cÃ³mo aÃ±adir nuevas
+- Plantilla de datos — cómo estructurar información personal, experiencia, educación, habilidades
+- Sistema de diseño — tipografía (Inter), colores, grid, UI glassmorphism
+- 8 reglas CSS obligatorias — los patrones exactos que hacen que los PDFs se vean correctamente
+- Componente de línea de tiempo — patrón círculo + línea con errores frecuentes de IA documentados
+- Optimización de espacio — sistema de 5 pasos para CVs escasos
+- Variantes de color por empresa — Accenture, Endesa, y cómo añadir nuevas
 
 **`skill.md` contiene:**
-- Fase 0 â€” protocolo de recogida de datos y anÃ¡lisis de GitHub
-- Fase 1 â€” generaciÃ³n del CV bilingÃ¼e con estructura de archivos Astro
-- Fase 2 â€” adaptaciÃ³n a oferta de empleo y coincidencia de palabras clave
-- 13 reglas absolutas â€” garantÃ­as de calidad que el agente no puede saltarse
+- Fase 0 — protocolo de recogida de datos y análisis de GitHub
+- Fase 1 — generación del CV bilingüe con estructura de archivos Astro
+- Fase 2 — adaptación a oferta de empleo y coincidencia de palabras clave
+- 13 reglas absolutas — garantías de calidad que el agente no puede saltarse
 
 ---
 
-### Stack tecnolÃ³gico (proyectos generados)
+### Stack tecnológico (proyectos generados)
 
-| Herramienta | FunciÃ³n |
+| Herramienta | Función |
 |---|---|
-| [Astro](https://astro.build) | Generador de sitios estÃ¡ticos â€” rÃ¡pido, sin JS por defecto |
-| [Inter (Google Fonts)](https://fonts.google.com/specimen/Inter) | TipografÃ­a premium en todos los pesos |
-| CSS Grid + `minmax(0, 1fr)` | Layout de dos columnas que sobrevive a la exportaciÃ³n PDF |
-| CSS `@media print` | SeparaciÃ³n entre renderizado en pantalla y en PDF |
-| `window.print()` | ExportaciÃ³n a PDF â€” sin dependencias externas |
+| [Astro](https://astro.build) | Generador de sitios estáticos — rápido, sin JS por defecto |
+| [Inter (Google Fonts)](https://fonts.google.com/specimen/Inter) | Tipografía premium en todos los pesos |
+| CSS Grid + `minmax(0, 1fr)` | Layout de dos columnas que sobrevive a la exportación PDF |
+| CSS `@media print` | Separación entre renderizado en pantalla y en PDF |
+| `window.print()` | Exportación a PDF — sin dependencias externas |
 
 ---
 
-### Â¿Por quÃ© no usar Word / Canva / Enhancv?
+### ¿Por qué no usar Word / Canva / Enhancv?
 
 | | CV Forge | Word | Canva / Enhancv |
 |---|:---:|:---:|:---:|
-| HTML compatible con ATS | âœ… | âš ï¸ | âŒ |
-| BilingÃ¼e en un solo proyecto | âœ… | âŒ | âŒ |
-| Variantes por oferta | âœ… | Manual | De pago |
-| UI web premium para compartir | âœ… | âŒ | âœ… |
-| ExportaciÃ³n a PDF | âœ… | âœ… | âœ… |
-| Completamente gratuito | âœ… | ðŸ’° | ðŸ’° |
-| Contenido generado por IA | âœ… | âŒ | Parcial |
+| HTML compatible con ATS | ✅ | ⚠️ | ❌ |
+| Bilingüe en un solo proyecto | ✅ | ❌ | ❌ |
+| Variantes por oferta | ✅ | Manual | De pago |
+| UI web premium para compartir | ✅ | ❌ | ✅ |
+| Exportación a PDF | ✅ | ✅ | ✅ |
+| Completamente gratuito | ✅ | 💰 | 💰 |
+| Contenido generado por IA | ✅ | ❌ | Parcial |
 
 ---
 
@@ -175,7 +175,7 @@ Las contribuciones son bienvenidas, especialmente:
 
 - Nuevas variantes de color para empresas en `contexto.md`
 - Reglas CSS adicionales para casos especiales
-- Patrones alternativos de lÃ­nea de tiempo
+- Patrones alternativos de línea de tiempo
 - Traducciones de `skill.md` a otros idiomas
 
 Abre un issue o un PR describiendo el caso de uso.
@@ -198,7 +198,7 @@ Instead of fighting with Word templates or paying for resume builders, you provi
 - **One-click PDF export** via browser print (A4, print-optimized CSS)
 - **Job-specific variants** that adapt keywords to each offer automatically
 
-> This repository contains the **context files** that power the AI agent â€” the design bible, CSS rules, and step-by-step implementation instructions.
+> This repository contains the **context files** that power the AI agent — the design bible, CSS rules, and step-by-step implementation instructions.
 >
 > **It is completely free. Use it, share it, and adapt it freely.**
 
@@ -210,12 +210,12 @@ Instead of fighting with Word templates or paying for resume builders, you provi
 |---|---|
 | **ATS Compliance** | Semantic HTML structure, logical text flow, no tables or columns that break parsers |
 | **Bilingual Output** | Spanish + English CVs in a single Astro project with page-break separation |
-| **PDF Export** | Print-optimized CSS â€” gradients, fonts, and layout survive `window.print()` |
+| **PDF Export** | Print-optimized CSS — gradients, fonts, and layout survive `window.print()` |
 | **Job Variants** | Separate pages per company/role with keyword-matched headlines and accent colors |
-| **Premium Design** | Glassmorphism UI Â· Inter font Â· Indigo gradient header Â· Two-column grid |
+| **Premium Design** | Glassmorphism UI · Inter font · Indigo gradient header · Two-column grid |
 | **Company Branding** | Automatic color adaptation (Accenture purple, Endesa blue, etc.) |
 | **Space Optimization** | 5-step system to fill sparse CVs without inventing content |
-| **AI Guardrails** | 13 strict rules â€” never invents experience, always runs ATS copy-paste test |
+| **AI Guardrails** | 13 strict rules — never invents experience, always runs ATS copy-paste test |
 
 ---
 
@@ -223,27 +223,27 @@ Instead of fighting with Word templates or paying for resume builders, you provi
 
 ```
 Your professional data
-        â”‚
-        â–¼
-  [skill.md] â”€â”€â–º AI Agent (Claude) reads contexto.md
-        â”‚
-        â–¼
+        │
+        ▼
+  [skill.md] ──► AI Agent (Claude) reads contexto.md
+        │
+        ▼
   Generates Astro project
-  â”œâ”€â”€ src/pages/index.astro              â† Bilingual base CV (ES + EN)
-  â”œâ”€â”€ src/pages/accenture-analyst.astro  â† Job variant #1
-  â”œâ”€â”€ src/pages/endesa-data.astro        â† Job variant #2
-  â””â”€â”€ src/styles/global.css             â† All custom CSS (no Tailwind)
-        â”‚
-        â–¼
-  npm run build â†’ Static site
-  Open in browser â†’ Print to PDF
+  ├── src/pages/index.astro              ← Bilingual base CV (ES + EN)
+  ├── src/pages/accenture-analyst.astro  ← Job variant #1
+  ├── src/pages/endesa-data.astro        ← Job variant #2
+  └── src/styles/global.css             ← All custom CSS (no Tailwind)
+        │
+        ▼
+  npm run build → Static site
+  Open in browser → Print to PDF
 ```
 
 The AI agent follows a **3-phase workflow**:
 
-1. **Data Collection** â€” Parses your experience, analyzes GitHub repos, creates `[name]-context.md`
-2. **Bilingual Base CV** â€” Builds the full Astro project with both language versions
-3. **Job Offer Adaptation** â€” Analyzes each job description, calculates match %, creates variant page
+1. **Data Collection** — Parses your experience, analyzes GitHub repos, creates `[name]-context.md`
+2. **Bilingual Base CV** — Builds the full Astro project with both language versions
+3. **Job Offer Adaptation** — Analyzes each job description, calculates match %, creates variant page
 
 ---
 
@@ -252,8 +252,8 @@ The AI agent follows a **3-phase workflow**:
 #### 1. Copy context files to your Claude session
 
 Open a new conversation at [claude.ai](https://claude.ai) and attach both files:
-- `contexto.md` â€” the design system and CSS rules
-- `skill.md` â€” the agent instructions
+- `contexto.md` — the design system and CSS rules
+- `skill.md` — the agent instructions
 
 #### 2. Provide your professional data
 
@@ -279,7 +279,7 @@ Paste a job description. The agent will:
 
 #### 5. Export PDF
 
-Open the page in browser â†’ `Ctrl+P` â†’ Save as PDF. The print CSS ensures:
+Open the page in browser → `Ctrl+P` → Save as PDF. The print CSS ensures:
 - A4 format with correct margins
 - White background (no ink waste)
 - Sidebar transforms inline for ATS scanners
@@ -290,24 +290,24 @@ Open the page in browser â†’ `Ctrl+P` â†’ Save as PDF. The print CSS e
 ### Project Structure
 
 ```
-CV Forge/
-â”œâ”€â”€ contexto.md     # Design system, CSS rules, color palettes, layout specs
-â””â”€â”€ skill.md        # AI agent instructions â€” 3-phase workflow + 13 guardrail rules
+cv-forge/
+├── contexto.md     # Design system, CSS rules, color palettes, layout specs
+└── skill.md        # AI agent instructions — 3-phase workflow + 13 guardrail rules
 ```
 
 **`contexto.md` contains:**
-- Data template â€” how to structure personal info, experience, education, skills
-- Design system â€” typography (Inter), colors, grid layout, glassmorphism UI
-- 8 mandatory CSS rules â€” the exact patterns that make PDFs look correct
-- Timeline component â€” circle + line pattern with documented AI error fixes
-- Space optimization â€” 5-step system for sparse CVs
-- Company color variants â€” Accenture, Endesa, and how to add new ones
+- Data template — how to structure personal info, experience, education, skills
+- Design system — typography (Inter), colors, grid layout, glassmorphism UI
+- 8 mandatory CSS rules — the exact patterns that make PDFs look correct
+- Timeline component — circle + line pattern with documented AI error fixes
+- Space optimization — 5-step system for sparse CVs
+- Company color variants — Accenture, Endesa, and how to add new ones
 
 **`skill.md` contains:**
-- Phase 0 â€” data collection and GitHub analysis protocol
-- Phase 1 â€” bilingual CV generation with Astro file structure
-- Phase 2 â€” job offer adaptation and keyword matching
-- 13 absolute rules â€” quality guardrails the agent must never break
+- Phase 0 — data collection and GitHub analysis protocol
+- Phase 1 — bilingual CV generation with Astro file structure
+- Phase 2 — job offer adaptation and keyword matching
+- 13 absolute rules — quality guardrails the agent must never break
 
 ---
 
@@ -315,11 +315,11 @@ CV Forge/
 
 | Tool | Role |
 |---|---|
-| [Astro](https://astro.build) | Static site generator â€” fast, zero-JS by default |
+| [Astro](https://astro.build) | Static site generator — fast, zero-JS by default |
 | [Inter (Google Fonts)](https://fonts.google.com/specimen/Inter) | Premium typography at all weights |
 | CSS Grid + `minmax(0, 1fr)` | Two-column layout that survives PDF export |
 | CSS `@media print` | Screen vs. PDF rendering split |
-| `window.print()` | PDF export â€” no external dependencies |
+| `window.print()` | PDF export — no external dependencies |
 
 ---
 
@@ -327,13 +327,13 @@ CV Forge/
 
 | | CV Forge | Word | Canva / Enhancv |
 |---|:---:|:---:|:---:|
-| ATS-compliant HTML | âœ… | âš ï¸ | âŒ |
-| Bilingual in one project | âœ… | âŒ | âŒ |
-| Job-specific variants | âœ… | Manual | Paid |
-| Premium web UI to share | âœ… | âŒ | âœ… |
-| PDF via browser print | âœ… | âœ… | âœ… |
-| Completely free | âœ… | ðŸ’° | ðŸ’° |
-| AI-generated content | âœ… | âŒ | Partial |
+| ATS-compliant HTML | ✅ | ⚠️ | ❌ |
+| Bilingual in one project | ✅ | ❌ | ❌ |
+| Job-specific variants | ✅ | Manual | Paid |
+| Premium web UI to share | ✅ | ❌ | ✅ |
+| PDF via browser print | ✅ | ✅ | ✅ |
+| Completely free | ✅ | 💰 | 💰 |
+| AI-generated content | ✅ | ❌ | Partial |
 
 ---
 
@@ -352,19 +352,18 @@ Open an issue or PR and describe the use case.
 
 <div align="center">
 
-**Licencia MIT â€” Ãºsalo, compÃ¡rtelo y adÃ¡ptalo sin restricciones.**
+**Licencia MIT — úsalo, compártelo y adáptalo sin restricciones.**
 
-**MIT License â€” use it, share it, and adapt it freely.**
+**MIT License — use it, share it, and adapt it freely.**
 
-Hecho con Claude AI Â· Para quienes se niegan a tener un CV mediocre
+Hecho con Claude AI · Para quienes se niegan a tener un CV mediocre
 
-Made with Claude AI Â· For those who refuse to have a mediocre CV
+Made with Claude AI · For those who refuse to have a mediocre CV
 
 ---
 
-Si te ha sido Ãºtil, deja una â­ â€” ayuda a que otros lo encuentren.
+Si te ha sido útil, deja una ⭐ — ayuda a que otros lo encuentren.
 
-If this saved you time, leave a â­ â€” it helps others find it.
+If this saved you time, leave a ⭐ — it helps others find it.
 
 </div>
-
